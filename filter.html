@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Learn vue js</title>
+        
+    </head>
+    <body>
+        <div id="root">
+            <h1>All task</h1>
+            <ul>
+                <li v-for="tasks in task" v-text="tasks.description" ></li>
+            </ul>
+            <h1>incompleted task</h1>
+            <ul>
+                <li v-for="tasks in incompletedtask" v-text="tasks.description" ></li>
+            </ul>
+        </div>
+        
+        <script src="https://unpkg.com/vue@2.5.3/dist/vue.js"></script>
+        <script>
+//          
+    
+            var app=new Vue({
+            
+                el:'#root',
+                data:{
+                task:
+                    [
+                    {description:'wake up',completed:true},
+                    {description:'brush ur teeth',completed:false},
+                    {description:'have ur breakfast',completed:true},
+                    {description:'go to code',completed:false},
+                    {description:'eat meal',completed:true},
+                    ]
+                },
+                
+                computed:{
+                    incompletedtask(){
+                        return this.task.filter(tasks=> !tasks.completed);
+                    }
+                }
+                
+               
+            });
+           
+           
+           
+            
+        </script>
+    </body>
+</html>

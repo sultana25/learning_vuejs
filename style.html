@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Learn vue js</title>
+        <style>
+            .is_loading{background:red;}
+        </style>
+    </head>
+    <body>
+        <div id="root">
+            
+             <button :class="{'is_loading':loading}" @click="toggle">click me</button>
+        </div>
+        
+        <script src="https://unpkg.com/vue@2.5.3/dist/vue.js"></script>
+        <script>
+//           var app= new Vue({
+//                el:'#root',
+//                data:{
+//                   newName:'',
+//                    names:['koli','promi','anika','eti']
+//                },
+//                
+//            });
+    
+            var app=new Vue({
+              el:'#root',
+                data:{
+                    loading:false
+                },
+                
+                methods:{
+                    toggle(){
+                        this.loading=true
+                    }
+                }
+                
+               
+            });
+           
+           
+           
+            
+        </script>
+    </body>
+</html>
