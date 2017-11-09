@@ -1,7 +1,7 @@
 Vue.component('message',{
   
     template:`
-        
+
     `,
    
 });
