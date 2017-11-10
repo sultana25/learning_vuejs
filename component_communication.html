@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Learn vue js</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
+        <style>body{padding-top:40px};
+        </style>
+    </head>
+    <body>
+        
+        <div id="root" class="container">
+           <cupon @applied="onCuponApplied"></cupon>
+            <h1 v-if="cuponApplied">You have a cupon.</h1>
+        </div>
+        
+        <script src="https://unpkg.com/vue@2.5.3/dist/vue.js"></script>
+        <script src="component_communication.js"></script>
+    </body>
+</html>
